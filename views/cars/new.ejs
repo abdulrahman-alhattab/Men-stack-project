@@ -4,21 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>car post</title>
+  <title>Add new Car</title>
 </head>
 
 <body>
   <h1>create a post</h1>
-  <%- include('../partials/_navbar.ejs') %>
-  <h1>Add New Listing</h1>
-  <!-- views/listings/new.ejs -->
+  <%- include('../partials/nav.ejs') %>
+  <h1>Add New Car</h1>
 
-  <form action="/applications" method="POST">
+  <form action="/cars" method="POST">
     <label for="country">country:</label>
     <input type="text" name="country" id="country" required />
 
-    <label for="car">car name:</label>
-    <input type="text" name="car" id="car" required />
+    <label for="name">name:</label>
+    <input type="text" name="name" id="name" required />
+
+    <label for="image">image here:</label>
+    <input type="text" name="image" id="image" required />
+
 
     <label for="price">Price:</label>
     <input type="number" name="price" id="price" min="0" required />
@@ -26,10 +29,10 @@
     <label for="year">year:</label>
     <input type="number" name="year" id="year" min="1950" required />
 
-   <label for="damaged">if damaged:</label>
+    <label for="damaged">if damaged:</label>
     <input type="checkbox" />
 
-    <button type="submit">Add Listing</button>
+    <button type="submit">Add Car</button>
 
   </form>
 

@@ -13,7 +13,7 @@ const { MongoStore } = require('connect-mongo')
 
 const passUserToView = require('./middleware/pass-user-to-view.js')
 
-const applicationsCtrl = require('./controllers/applications')
+const applicationsCtrl = require('./controllers/cars.js')
 // Set the port from environment variable or default to 3000
 const port = process.env.PORT ? process.env.PORT : '3000'
 
@@ -23,13 +23,7 @@ mongoose.connection.on('connected', () => {
   console.log(`Connected to MongoDB ${mongoose.connection.name}.`)
 })
 app.use(express.static(path.join(__dirname, 'public')))
-app.use(
-  session({
-    secret: process.env.session_secret,
-    resave: false,
-    saveUninitialized: true
-  })
-)
+
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -41,13 +35,6 @@ app.use(
   })
 )
 
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: true
-  })
-)
 // Add our custom middleware right after the session middleware
 app.use(passUserToView)
 
@@ -66,7 +53,7 @@ app.use('/auth', authCtrl)
 app.get('/', async (req, res) => {
   res.render('index.ejs')
 })
-app.use('/users/:usersId/applications/', applicationsCtrl)
+app.use('/cars', applicationsCtrl)
 app.use(isSignedIn)
 
 app.listen(port, () => {

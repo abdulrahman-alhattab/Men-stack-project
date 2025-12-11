@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All cars</title>
+</head>
+
+<body>
+  <h1>heres the car lists</h1>
+  <a href="/cars/new">Add a New car</a>
+  <ul>
+    <% cars.forEach((car) => { %>
+    <li>
+      A car has been listed in <%= car.country %>
+      for <%= car.name %>
+      owned by <%= car.owner.username %>.
+      <a href="/car/<%=car._id%>">details</a>
+    </li>
+    <% }) %>
+  </ul>
+</body>
+
+</html>

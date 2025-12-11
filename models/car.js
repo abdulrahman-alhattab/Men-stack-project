@@ -1,9 +1,12 @@
 const mongoose = require('mongoose')
-const appSchema = new mongoose.Schema(
+const carSchema = new mongoose.Schema(
   {
-    cars: {
+    name: {
       type: String,
       required: true
+    },
+    image: {
+      type: String
     },
     price: {
       type: Number,
@@ -11,7 +14,8 @@ const appSchema = new mongoose.Schema(
     },
     damaged: {
       type: Boolean,
-      required: true
+      required: true,
+      default: false
     },
     year: {
       type: Number,
@@ -19,11 +23,11 @@ const appSchema = new mongoose.Schema(
     },
     owner: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'user'
+      ref: 'User'
     }
   },
   { timestamps: true }
 )
-const Applications = mongoose.model('applications', appSchema)
+const Car = mongoose.model('Car', carSchema)
 
-module.exports = Applications
+module.exports = Car
