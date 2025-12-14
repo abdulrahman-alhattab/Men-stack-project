@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>edit</title>
+</head>
+
+<body>
+  <h1>edit page</h1>
+  <form
+      action="/cars/<%=car._id %>?method=put"
+      method="post">
+
+    <label for="country">country</label>
+    <input
+        type="text"
+        name=country
+        id="country"
+        value="<%= car.country %>" />
+
+
+    <label for="name">Car name</label>
+    <input
+        type="text"
+        name="name"
+        id="name"
+        value="<%= car.name %>"
+
+    <label for="year">year</label>
+    <input
+        type="number"
+        name="year"
+        id="year"
+        value="<%= car.year %>" />
+
+
+    <label for="price"></label>
+    <input
+        type="number"
+        name="Price"
+        id="price"
+        value="<%= car.price %>" />
+
+
+    <label for="damaged">if damaged</label>
+    <input
+        type="checkbox"
+        name="damaged"
+        id="damaged"
+        value="<%= car.damaged %>">
+
+
+
+
+
+  </form>
+</body>
+
+</html>

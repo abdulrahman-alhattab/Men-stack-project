@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>show page</title>
+</head>
+<body>
+  <%- include('../partials/nav.ejs') %>
+
+<h1>details</h1>
+    <h2>car in:<%= car.country %></h2>
+    <h2>model:<%= car.name %></h2>
+    <h2>made in:<%= car.year %></h2>
+    <h2>costs:<%= car.price %></h2>
+    <h2>is it damaged:<%= car.damaged %></h2>
+
+</body>
+</html>
