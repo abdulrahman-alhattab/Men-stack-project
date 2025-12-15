@@ -49,13 +49,26 @@ router.delete('/:id', async (req, res) => {
     console.error(err)
   }
 })
-router.put('/:id', async (req, res) => {
+router.get('/:id/edit', async (req, res) => {
   try {
     const car = await Car.findById(req.params.id)
+    res.render('cars/edit.ejs', { car })
+  } catch (err) {
+    console.error(err)
+  }
+})
+router.put('/:id', async (req, res) => {
+  try {
+    console.log(req.params)
+    console.log(req.body)
+    console.log(req.session.user)
+
+    const car = await Car.findById(req.params.id)
     const isOwner = car.owner.equals(req.session.user._id)
+    console.log('here 1')
     if (isOwner) {
-      await car.updateOne(req.body)
-      res.redirect(`/cars/ ${req.params.id}`)
+      await Car.updateOne({ _id: req.params.id }, req.body)
+      res.redirect(`/cars/${req.params.id}`)
     }
   } catch (err) {
     console.error(err)

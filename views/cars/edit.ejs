@@ -4,57 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>edit</title>
+  <title>edit <%= car.name %></title>
+    <link rel="stylesheet" href="/css/create.css">
 </head>
 
 <body>
+  <%- include('../partials/nav.ejs') %>
   <h1>edit page</h1>
-  <form
-      action="/cars/<%=car._id %>?method=put"
-      method="post">
+  <form action="/cars/<%=car._id %>?_method=PUT" method="post">
 
     <label for="country">country</label>
-    <input
-        type="text"
-        name=country
-        id="country"
-        value="<%= car.country %>" />
+    <input type="text" name=country id="country" value="<%= car.country %>" />
 
 
     <label for="name">Car name</label>
-    <input
-        type="text"
-        name="name"
-        id="name"
-        value="<%= car.name %>"
-
-    <label for="year">year</label>
-    <input
-        type="number"
-        name="year"
-        id="year"
-        value="<%= car.year %>" />
+    <input type="text" name="name" id="name" value="<%= car.name %>" <label for="year">year</label>
+    <input type="number" name="year" id="year" value="<%= car.year %>" />
 
 
     <label for="price"></label>
-    <input
-        type="number"
-        name="Price"
-        id="price"
-        value="<%= car.price %>" />
+    <input type="number" name="price" id="price" value="<%= car.price %>" />
 
 
     <label for="damaged">if damaged</label>
-    <input
-        type="checkbox"
-        name="damaged"
-        id="damaged"
-        value="<%= car.damaged %>">
+    <input type="checkbox" name="damaged" id="damaged" value="<%= car.damaged %>">
 
+    <label for="description"></label>
+    <input type="text" name="description" id="description" value="<%= car.description %>">
 
+    <label for="image"></label>
+    <input type="text" name="image" id="image" value="<%= car.image %>">
 
-
-
+    <button type="submit">Edit car</button>
   </form>
 </body>
 

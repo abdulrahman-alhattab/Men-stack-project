@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add new Car</title>
+    <link rel="stylesheet" href="/css/create.css">
 </head>
 
 <body>
@@ -13,6 +14,8 @@
   <h1>Add New Car</h1>
 
   <form action="/cars" method="POST">
+
+
     <label for="country">country:</label>
     <input type="text" name="country" id="country" required />
 
@@ -27,10 +30,14 @@
     <input type="number" name="price" id="price" min="0" required />
 
     <label for="year">year:</label>
-    <input type="number" name="year" id="year" min="1950" required />
+    <input type="number" name="year" id="year" min="1900" required />
 
     <label for="damaged">if damaged:</label>
-    <input type="checkbox" />
+    <input type="checkbox" name="damaged" id="damaged" />
+
+
+    <label for="description">description: </label>
+    <input type="text" name="description" id="description">
 
     <button type="submit">Add Car</button>
 

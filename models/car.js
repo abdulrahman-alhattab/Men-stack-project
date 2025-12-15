@@ -9,6 +9,10 @@ const carSchema = new mongoose.Schema(
       type: String,
       required: true
     },
+    year: {
+      type: Number,
+      required: true
+    },
     image: {
       type: String
     },
@@ -21,10 +25,10 @@ const carSchema = new mongoose.Schema(
       required: true,
       default: false
     },
-    year: {
-      type: Number,
-      required: true
+    description:{
+      type: String
     },
+
     owner: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User'
