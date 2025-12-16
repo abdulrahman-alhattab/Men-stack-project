@@ -1,10 +1,10 @@
-
-<nav>
+<nav id="nav">
+<link rel="stylesheet" href="/css/sign.css">
   <% if (user) { %>
-  <a href="/cars">All cars</a>
-  <a href="/auth/sign-out">Sign Out</a>
+      <a id="all-cars" href="/cars">All cars</a>
+      <a id="sign-out" href="/auth/sign-out">Sign Out</a>
   <% } else { %>
-  <a href="/auth/sign-up">Sign Up</a>
-  <a href="/auth/sign-in">Sign In</a>
+      <a style="margin-right: 20px;" id="sign-up" href="/auth/sign-up">Sign Up</a>
+      <a id="sign-in" href="/auth/sign-in">Sign In</a>
   <% } %>
 </nav>

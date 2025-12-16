@@ -5,22 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All cars</title>
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/all-cars.css">
 </head>
 
 <body>
+    <%- include('../partials/nav.ejs') %>
+  <div id="car-list">
   <h1>heres the car lists</h1>
-  <a href="/cars/new">Add a New car</a>
-  <ul>
+  <a id="new" href="/cars/new">Add a New car</a>
+  <ul id="cars">
     <% cars.forEach((car) => { %>
     <li>
       A car has been listed in <%= car.country %>
       for <%= car.name %>
       owned by <%= car.owner.username %>.
-      <a href="/cars/<%=car._id%>">details</a>
+      <a id="details-btn" href="/cars/<%=car._id%>">details</a>
     </li>
     <% }) %>
   </ul>
+  </div>
 </body>
 
 </html>

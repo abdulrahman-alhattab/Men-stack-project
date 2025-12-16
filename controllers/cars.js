@@ -20,6 +20,11 @@ router.get('/new', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     req.body.owner = req.session.user._id
+    if (req.body.damaged) {
+      req.body.damaged = true
+    } else {
+      req.body.damaged = false
+    }
     await Car.create(req.body)
     res.redirect('/cars')
   } catch (err) {
@@ -67,6 +72,11 @@ router.put('/:id', async (req, res) => {
     const isOwner = car.owner.equals(req.session.user._id)
     console.log('here 1')
     if (isOwner) {
+      if (req.body.damaged) {
+        req.body.damaged = true
+      } else {
+        req.body.damaged = false
+      }
       await Car.updateOne({ _id: req.params.id }, req.body)
       res.redirect(`/cars/${req.params.id}`)
     }

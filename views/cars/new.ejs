@@ -9,37 +9,36 @@
 </head>
 
 <body>
-  <h1>create a post</h1>
-  <%- include('../partials/nav.ejs') %>
+    <%- include('../partials/nav.ejs') %>
   <h1>Add New Car</h1>
 
-  <form action="/cars" method="POST">
+  <form id="create-car" action="/cars" method="POST">
 
 
-    <label for="country">country:</label>
+    <label id="country" for="country">country:</label>
     <input type="text" name="country" id="country" required />
 
-    <label for="name">name:</label>
+    <label id="name" for="name">name:</label>
     <input type="text" name="name" id="name" required />
 
-    <label for="image">image here:</label>
+    <label id="image" for="image">image here:</label>
     <input type="text" name="image" id="image" required />
 
 
-    <label for="price">Price:</label>
+    <label id="price" for="price">Price:</label>
     <input type="number" name="price" id="price" min="0" required />
 
-    <label for="year">year:</label>
+    <label id="year" for="year">year:</label>
     <input type="number" name="year" id="year" min="1900" required />
 
-    <label for="damaged">if damaged:</label>
+    <label id="damaged" for="damaged">if damaged:</label>
     <input type="checkbox" name="damaged" id="damaged" />
 
 
-    <label for="description">description: </label>
+    <label id="description" for="description">description: </label>
     <input type="text" name="description" id="description">
 
-    <button type="submit">Add Car</button>
+    <button id="button" type="submit">Add Car</button>
 
   </form>
 

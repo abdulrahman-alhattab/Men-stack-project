@@ -1,0 +1,61 @@
+body {
+  background-color: rgb(245, 242, 231);
+  width: 100vw;
+  height: 100vh;
+}
+
+body h1 {
+  display: flex;
+  justify-content: center;
+  /* margin: 5% auto; */
+  color: rgb(42, 66, 58);
+  background-color: blanchedalmond;
+  font-size: 50px;
+  font-style: oblique;
+  /* padding: 7px 20px; */
+}
+
+#nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(207, 190, 151);
+  padding: 50px;
+  margin: auto;
+  border-radius: 40px;
+  border-spacing: 1px;
+  font-size: 35px;
+  font-style: oblique;
+  color: rgb(107, 82, 49);
+}
+
+#all-cars {
+  display: flex;
+  display: inline-block;
+  font-size: 35px;
+  font-style: oblique;
+  justify-content: center;
+  align-items: center;
+  margin: 24px;
+  margin-left: 650px;
+  padding: 14px;
+  background-color: rgb(212, 195, 172);
+  border-radius: 40px;
+  text-align: center;
+  color: rgb(107, 82, 49);
+}
+#sign-out {
+  display: flex;
+  font-size: 20px;
+  font-style: oblique;
+  justify-content: end;
+  align-items: end;
+
+  margin: 16px;
+  padding: 14px;
+  background-color: rgb(212, 195, 172);
+  border-radius: 40px;
+  display: inline-block;
+  text-align: center;
+  color: rgb(107, 82, 49);
+}

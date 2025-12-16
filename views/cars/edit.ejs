@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <%- include('../partials/nav.ejs') %>
+    <%- include('../partials/nav.ejs') %>
   <h1>edit page</h1>
   <form action="/cars/<%=car._id %>?_method=PUT" method="post">
 
@@ -35,7 +35,7 @@
     <label for="image"></label>
     <input type="text" name="image" id="image" value="<%= car.image %>">
 
-    <button type="submit">Edit car</button>
+    <button id="button" type="submit">Edit car</button>
   </form>
 </body>
 

@@ -1,4 +1,144 @@
 body {
-  background-color: rgb(236, 228, 228);
-  
+  background-color: rgb(245, 242, 231);
+  width: 98vw;
+}
+
+body h1 {
+  display: flex;
+  justify-content: center;
+  margin: 5% auto;
+  color: rgb(42, 66, 58);
+  background-color: blanchedalmond;
+  font-size: 50px;
+  font-style: oblique;
+  padding: 7px 20px;
+}
+#login label {
+  margin: 12px;
+  color: rgb(54, 54, 53);
+  background-color: blanchedalmond;
+  font-size: large;
+  font-style: oblique;
+}
+#login input {
+  padding: 7px 12px;
+  border: 0;
+  text-align: center;
+  border-radius: 60px;
+}
+
+#login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+  background-color: rgb(174, 164, 140);
+  padding: 30px;
+  box-shadow: rgb(229, 192, 144) inset;
+  border-radius: 40px;
+}
+#button {
+  gap: 50px;
+  height: auto;
+  width: 10%;
+  padding: 5px;
+  font-size: large;
+  background-color: #fbe4c2;
+  border-radius: 100px;
+  box-shadow: rgba(187, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(187, 163, 44, 0.15) 0 1px 2px, rgba(187, 187, 99, 0.15) 0 2px 4px,
+    rgba(187, 187, 99, 0.15) 0 4px 8px, rgba(187, 187, 99, 0.15) 0 8px 16px,
+    rgba(187, 187, 99, 0.15) 0 16px 32px;
+  color: rgb(128, 102, 0);
+  cursor: pointer;
+  display: inline-block;
+
+  font-size: large;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 24px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 15px;
+}
+#button:hover {
+  box-shadow: rgba(187, 161, 44, 0.35) 0 -25px 18px -14px inset,
+    rgba(187, 149, 44, 0.25) 0 1px 2px, rgba(187, 142, 44, 0.25) 0 2px 4px,
+    rgba(187, 156, 44, 0.25) 0 4px 8px, rgba(187, 149, 44, 0.25) 0 8px 16px,
+    rgba(187, 137, 44, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+#nav {
+  gap: 50px;
+  height: auto;
+  /* width: 100%; */
+  padding: 5px;
+  font-size: large;
+  background-color: #fbe4c2;
+  border-radius: 5xpx;
+  box-shadow: rgba(187, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(187, 163, 44, 0.15) 0 1px 2px, rgba(187, 187, 99, 0.15) 0 2px 4px,
+    rgba(187, 187, 99, 0.15) 0 4px 8px, rgba(187, 187, 99, 0.15) 0 8px 16px,
+    rgba(187, 187, 99, 0.15) 0 16px 32px;
+  color: rgb(128, 102, 0);
+  cursor: pointer;
+  /* display: inline-block; */
+
+  font-size: large;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 24px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  /* margin: 15px; */
+}
+#sign-in,
+#sign-up,
+#sign-out,
+#all-cars{
+   gap: 50px;
+  height: auto;
+  width: 10%;
+  padding: 5px;
+  font-size: large;
+  background-color: #f7d29b;
+  border-radius: 100px;
+  box-shadow: rgba(187, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(187, 163, 44, 0.15) 0 1px 2px, rgba(187, 187, 99, 0.15) 0 2px 4px,
+    rgba(187, 187, 99, 0.15) 0 4px 8px, rgba(187, 187, 99, 0.15) 0 8px 16px,
+    rgba(187, 187, 99, 0.15) 0 16px 32px;
+  color: rgb(128, 102, 0);
+  cursor: pointer;
+  display: inline-block;
+
+  font-size: large;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 24px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 15px;
+}
+#sign-in:hover,
+#sign-up:hover,
+#sign-out:hover,
+#all-cars:hover {
+  box-shadow: rgba(187, 161, 44, 0.35) 0 -25px 18px -14px inset,
+    rgba(187, 149, 44, 0.25) 0 1px 2px, rgba(187, 142, 44, 0.25) 0 2px 4px,
+    rgba(187, 156, 44, 0.25) 0 4px 8px, rgba(187, 149, 44, 0.25) 0 8px 16px,
+    rgba(187, 137, 44, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
 }
